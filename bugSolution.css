@@ -1,0 +1,5 @@
+To address this unexpected `calc()` behavior, it is advisable to convert all units to a single unit type before performing the calculation.  For example, converting both percentages and `vw` units to pixels will provide more consistent results across browsers.
+
+This solution typically involves JavaScript to determine the parent's width and the viewport width in pixels, then calculate the final width.  This removes the ambiguity of `calc()` handling different unit types.
+
+Alternatively, you can explore simpler layout techniques without relying on `calc()` to solve your width requirements.
