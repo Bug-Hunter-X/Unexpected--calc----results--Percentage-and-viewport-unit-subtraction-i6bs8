@@ -1,0 +1,11 @@
+The following CSS code snippet demonstrates an issue with unexpected behavior when using the `calc()` function with percentages and viewport units:
+
+```css
+.container {
+  width: calc(50% - 10vw);
+}
+```
+
+This code intends to make the container's width 50% of its parent, minus 10% of the viewport width. However, the result might not be what's expected in some browsers due to how `calc()` handles different unit types in subtraction.
+
+The issue may be that the subtraction happens before unit conversion, leading to unexpected results, especially when the viewport width changes.
